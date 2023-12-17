@@ -39,11 +39,14 @@
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v7.1.2, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activestorage (v7.1.2, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v7.1.2, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.8.6, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="base64 (v0.2.0, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bigdecimal (v3.1.5, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bindex (v0.8.1, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootsnap (v1.17.0, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.4, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v2.4.13, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="capybara (v3.39.2, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.2.2, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="connection_pool (v2.4.1, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="crass (v1.0.6, ruby-3.2.2-p53) [gem]" level="application" />
@@ -53,11 +56,14 @@
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.12.0, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v1.2.1, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.14.1, ruby-3.2.2-p53) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="io-console (v0.7.0, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="importmap-rails (v1.2.3, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="io-console (v0.7.1, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="irb (v1.10.1, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.11.5, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="loofah (v2.22.0, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.8.1, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="marcel (v1.0.2, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="matrix (v0.4.2, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mini_mime (v1.1.5, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.20.0, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="msgpack (v1.7.2, ruby-3.2.2-p53) [gem]" level="application" />
@@ -69,6 +75,7 @@
     <orderEntry type="library" scope="PROVIDED" name="nio4r (v2.7.0, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="nokogiri (v1.15.5, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="psych (v5.1.1.1, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="public_suffix (v5.0.4, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="puma (v6.4.0, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="racc (v1.7.3, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v3.0.8, ruby-3.2.2-p53) [gem]" level="application" />
@@ -80,17 +87,28 @@
     <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.6.0, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v7.1.2, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.1.0, ruby-3.2.2-p53) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rdoc (v6.6.1, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rdoc (v6.6.2, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="regexp_parser (v2.8.3, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="reline (v0.4.1, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rexml (v3.2.6, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubyzip (v2.3.2, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v4.16.0, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sprockets (v4.2.1, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v3.4.2, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.6.9, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="stimulus-rails (v1.3.0, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="stringio (v3.1.0, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v1.3.0, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="timeout (v0.4.1, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="turbo-rails (v1.5.0, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v2.0.6, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo-data (v1.2023.3, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="web-console (v4.2.1, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="webrick (v1.8.1, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="websocket (v1.2.10, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.7.6, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.5, ruby-3.2.2-p53) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="xpath (v3.2.0, ruby-3.2.2-p53) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="zeitwerk (v2.6.12, ruby-3.2.2-p53) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
@@ -101,15 +119,15 @@
     <option name="generators">
       <list>
         <option value="active_record:application_record" />
-        <option value="active_record:migration" />
-        <option value="active_record:model" />
         <option value="active_record:multi_db" />
         <option value="application_record" />
         <option value="benchmark" />
         <option value="channel" />
         <option value="controller" />
         <option value="generator" />
+        <option value="helper" />
         <option value="integration_test" />
+        <option value="jbuilder" />
         <option value="job" />
         <option value="mailbox" />
         <option value="mailer" />
@@ -118,35 +136,28 @@
         <option value="resource" />
         <option value="scaffold" />
         <option value="scaffold_controller" />
+        <option value="stimulus" />
         <option value="system_test" />
         <option value="task" />
         <option value="test_unit:channel" />
-        <option value="test_unit:controller" />
         <option value="test_unit:generator" />
-        <option value="test_unit:helper" />
         <option value="test_unit:install" />
-        <option value="test_unit:integration" />
-        <option value="test_unit:job" />
         <option value="test_unit:mailbox" />
-        <option value="test_unit:mailer" />
-        <option value="test_unit:model" />
         <option value="test_unit:plugin" />
-        <option value="test_unit:scaffold" />
-        <option value="test_unit:system" />
       </list>
     </option>
     <option name="myGenerators">
       <list>
         <option value="active_record:application_record" />
-        <option value="active_record:migration" />
-        <option value="active_record:model" />
         <option value="active_record:multi_db" />
         <option value="application_record" />
         <option value="benchmark" />
         <option value="channel" />
         <option value="controller" />
         <option value="generator" />
+        <option value="helper" />
         <option value="integration_test" />
+        <option value="jbuilder" />
         <option value="job" />
         <option value="mailbox" />
         <option value="mailer" />
@@ -155,21 +166,14 @@
         <option value="resource" />
         <option value="scaffold" />
         <option value="scaffold_controller" />
+        <option value="stimulus" />
         <option value="system_test" />
         <option value="task" />
         <option value="test_unit:channel" />
-        <option value="test_unit:controller" />
         <option value="test_unit:generator" />
-        <option value="test_unit:helper" />
         <option value="test_unit:install" />
-        <option value="test_unit:integration" />
-        <option value="test_unit:job" />
         <option value="test_unit:mailbox" />
-        <option value="test_unit:mailer" />
-        <option value="test_unit:model" />
         <option value="test_unit:plugin" />
-        <option value="test_unit:scaffold" />
-        <option value="test_unit:system" />
       </list>
     </option>
   </component>
@@ -337,6 +341,21 @@
               </RakeTaskImpl>
             </subtasks>
           </RakeTaskImpl>
+          <RakeTaskImpl id="assets">
+            <subtasks>
+              <RakeTaskImpl description="Remove old compiled assets" fullCommand="assets:clean[keep]" id="clean[keep]" />
+              <RakeTaskImpl description="Remove compiled assets" fullCommand="assets:clobber" id="clobber" />
+              <RakeTaskImpl description="Load asset compile environment" fullCommand="assets:environment" id="environment" />
+              <RakeTaskImpl description="Compile all the assets named in config.assets.precompile" fullCommand="assets:precompile" id="precompile" />
+              <RakeTaskImpl description="" fullCommand="assets:clean" id="clean" />
+            </subtasks>
+          </RakeTaskImpl>
+          <RakeTaskImpl id="cache_digests">
+            <subtasks>
+              <RakeTaskImpl description="Lookup first-level dependencies for TEMPLATE (like messages/show or comments/_comment.html)" fullCommand="cache_digests:dependencies" id="dependencies" />
+              <RakeTaskImpl description="Lookup nested dependencies for TEMPLATE (like messages/show or comments/_comment.html)" fullCommand="cache_digests:nested_dependencies" id="nested_dependencies" />
+            </subtasks>
+          </RakeTaskImpl>
           <RakeTaskImpl id="db">
             <subtasks>
               <RakeTaskImpl description="Create the database from DATABASE_URL or config/database.yml for the current RAILS_ENV (use db:create:all to create all databases in the config). Without RAILS_ENV or when RAILS_ENV is development, it defaults to creating the development and test databases, except when DATABASE_URL is present" fullCommand="db:create" id="create" />
@@ -434,12 +453,35 @@
               <RakeTaskImpl description="" fullCommand="db:truncate_all" id="truncate_all" />
             </subtasks>
           </RakeTaskImpl>
+          <RakeTaskImpl id="importmap">
+            <subtasks>
+              <RakeTaskImpl description="Setup Importmap for the app" fullCommand="importmap:install" id="install" />
+            </subtasks>
+          </RakeTaskImpl>
           <RakeTaskImpl id="log">
             <subtasks>
               <RakeTaskImpl description="Truncate all/specified *.log files in log/ to zero bytes (specify which logs with LOGS=test,development)" fullCommand="log:clear" id="clear" />
             </subtasks>
           </RakeTaskImpl>
           <RakeTaskImpl description="Report code statistics (KLOCs, etc) from the application or engine" fullCommand="stats" id="stats" />
+          <RakeTaskImpl id="stimulus">
+            <subtasks>
+              <RakeTaskImpl description="Install Stimulus into the app" fullCommand="stimulus:install" id="install" />
+              <RakeTaskImpl id="install">
+                <subtasks>
+                  <RakeTaskImpl description="Install Stimulus on an app running bun" fullCommand="stimulus:install:bun" id="bun" />
+                  <RakeTaskImpl description="Install Stimulus on an app running importmap-rails" fullCommand="stimulus:install:importmap" id="importmap" />
+                  <RakeTaskImpl description="Install Stimulus on an app running node" fullCommand="stimulus:install:node" id="node" />
+                </subtasks>
+              </RakeTaskImpl>
+              <RakeTaskImpl id="manifest">
+                <subtasks>
+                  <RakeTaskImpl description="" fullCommand="stimulus:manifest:display" id="display" />
+                  <RakeTaskImpl description="" fullCommand="stimulus:manifest:update" id="update" />
+                </subtasks>
+              </RakeTaskImpl>
+            </subtasks>
+          </RakeTaskImpl>
           <RakeTaskImpl description="Run all tests in test folder except system ones" fullCommand="test" id="test" />
           <RakeTaskImpl id="test">
             <subtasks>
@@ -501,6 +543,19 @@
               <RakeTaskImpl id="storage">
                 <subtasks>
                   <RakeTaskImpl description="" fullCommand="tmp:storage:clear" id="clear" />
+                </subtasks>
+              </RakeTaskImpl>
+            </subtasks>
+          </RakeTaskImpl>
+          <RakeTaskImpl id="turbo">
+            <subtasks>
+              <RakeTaskImpl description="Install Turbo into the app" fullCommand="turbo:install" id="install" />
+              <RakeTaskImpl id="install">
+                <subtasks>
+                  <RakeTaskImpl description="Install Turbo into the app with bun" fullCommand="turbo:install:bun" id="bun" />
+                  <RakeTaskImpl description="Install Turbo into the app with asset pipeline" fullCommand="turbo:install:importmap" id="importmap" />
+                  <RakeTaskImpl description="Install Turbo into the app with webpacker" fullCommand="turbo:install:node" id="node" />
+                  <RakeTaskImpl description="Switch on Redis and use it in development" fullCommand="turbo:install:redis" id="redis" />
                 </subtasks>
               </RakeTaskImpl>
             </subtasks>

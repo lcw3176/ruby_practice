@@ -1,5 +1,5 @@
 class HelloController < ApplicationController
   def index
-    render text: 'Hello world..!'
+    render json: 'hello'
   end
 end
