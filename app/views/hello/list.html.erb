@@ -1,0 +1,30 @@
+<table border="1">
+  <tr>
+    <th>ISBN 코드</th>
+    <th>이름</th>
+    <th>가격</th>
+    <th>출판사</th>
+    <th>출판일</th>
+    <th>CD-ROM</th>
+  </tr>
+
+  <% @books.each do |book| %>
+
+    <tr>
+      <th>
+        <% book.isbn %></th>
+      <th>
+        <% book.title %></th>
+      <th>
+        <% book.price %></th>
+      <th>
+        <% book.publish %></th>
+      <th>
+        <% book.published %></th>
+      <th>
+        <% book.cd %></th>
+    </tr>
+
+
+  <% end %>
+</table>
