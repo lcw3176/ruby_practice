@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :fan_comments
+  resources :reviews
+  resources :authors
+  resources :users
   resources :books
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
