@@ -1,0 +1,2 @@
+module FleamarketHelper
+end
