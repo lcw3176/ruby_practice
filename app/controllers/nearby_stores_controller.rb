@@ -1,0 +1,2 @@
+class NearbyStoresController < ApplicationController
+end
