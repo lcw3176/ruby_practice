@@ -1,0 +1,2 @@
+class FleamarketProduct < ApplicationRecord
+end
