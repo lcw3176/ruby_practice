@@ -1,11 +1,35 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+one:
+  user_id: 1
+  login_date: 20231225124706
+  login_status: SUCCESS
+  try_address: 서울시 강북구 수유동
 
-# This model initially had no columns defined. If you add columns to the
-# model remove the "{}" from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-# column: value
+two:
+  user_id: 2
+  login_date: 20231225124706
+  login_status: SUCCESS
+  try_address: 서울시 강북구 수유동
+
+three:
+  user_id: 3
+  login_date: 20231225124706
+  login_status: SUCCESS
+  try_address: 서울시 강북구 수유동
+
+four:
+  user_id: 4
+  login_date: 20231225124706
+  login_status: SUCCESS
+  try_address: 서울시 강북구 미아동
+
+five:
+  user_id: 5
+  login_date: 20231225124706
+  login_status: SUCCESS
+  try_address: 서울시 강북구 미아동
+
+six:
+  user_id: 6
+  login_date: 20231225124706
+  login_status: SUCCESS
+  try_address: 서울시 강북구 미아동

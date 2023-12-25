@@ -53,7 +53,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_24_134812) do
   end
 
   create_table "user_histories", force: :cascade do |t|
-    t.bigint "user_history_id"
     t.integer "user_id"
     t.datetime "login_date"
     t.boolean "login_status"
@@ -64,7 +63,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_24_134812) do
   end
 
   create_table "user_privates", force: :cascade do |t|
-    t.bigint "user_private_id"
     t.integer "user_id"
     t.string "phone_number", default: "", null: false
     t.string "address", default: "", null: false
@@ -74,7 +72,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_24_134812) do
   end
 
   create_table "user_statuses", force: :cascade do |t|
-    t.bigint "user_status_id"
     t.integer "user_id"
     t.integer "status_type"
     t.datetime "created_at", null: false
