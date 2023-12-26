@@ -1,13 +1,46 @@
 <div class="columns mt-5">
-  <div class="column is-2">
+  <div class="column is-3">
 
   </div>
   <div class="column mt-5 has-text-centered">
     <h1 class="title is-3 m-5">중고거래 인기매물</h1>
 
+    <% for response_row in @responses.each_slice(3).to_a %>
+      <div class="columns">
+
+        <% for response in response_row %>
+          <div class="column is-4">
+
+
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <%= image_tag(response.product.thumbnail_url, :alt => "placeholder") %>
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="content has-text-left">
+                  <p class="subtitle is-5"><%= response.product.title %></p>
+                  <p><%= response.product.price %>원</p>
+                  <p><%= response.user_private.address %></p>
+                  <p><%= response.product.user.manner_degree %></p>
+                </div>
+
+
+              </div>
+            </div>
+
+
+          </div>
+        <% end %>
+
+      </div>
+    <% end %>
+
+
   </div>
 
-  <div class="column is-2">
+  <div class="column is-3">
 
   </div>
 </div>
