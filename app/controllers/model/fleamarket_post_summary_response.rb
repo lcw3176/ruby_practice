@@ -12,6 +12,7 @@ class FleamarketPostSummaryResponse
   def initialize(post, interested_count)
     @title = post.title
     @view_count = post.view_count
+    @price = post.price
     @trade_address = post.trade_address
     @thumbnail_url = post.thumbnail_url
     @trade_status = post.trade_status
