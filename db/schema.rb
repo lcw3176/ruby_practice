@@ -10,47 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_24_134812) do
-  create_table "fleamarket_product_images", force: :cascade do |t|
-    t.integer "fleamarket_product_id"
+ActiveRecord::Schema[7.1].define(version: 2023_12_26_073233) do
+  create_table "fleamarket_post_images", force: :cascade do |t|
+    t.integer "fleamarket_post_id", null: false
     t.string "source_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["fleamarket_product_id"], name: "index_fleamarket_product_images_on_fleamarket_product_id"
+    t.index ["fleamarket_post_id"], name: "index_fleamarket_post_images_on_fleamarket_post_id"
   end
 
-  create_table "fleamarket_product_interesteds", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "fleamarket_product_id"
+  create_table "fleamarket_post_interesteds", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "fleamarket_post_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["fleamarket_product_id"], name: "index_fleamarket_product_interesteds_on_fleamarket_product_id"
-    t.index ["user_id"], name: "index_fleamarket_product_interesteds_on_user_id"
+    t.index ["fleamarket_post_id"], name: "index_fleamarket_post_interesteds_on_fleamarket_post_id"
+    t.index ["user_id"], name: "index_fleamarket_post_interesteds_on_user_id"
   end
 
-  create_table "fleamarket_products", force: :cascade do |t|
+  create_table "fleamarket_posts", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "fleamarket_trade_id"
     t.string "title"
     t.string "content"
     t.integer "view_count"
     t.integer "price"
     t.string "category"
+    t.string "trade_address"
     t.string "thumbnail_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["fleamarket_trade_id"], name: "index_fleamarket_products_on_fleamarket_trade_id"
-    t.index ["user_id"], name: "index_fleamarket_products_on_user_id"
-  end
-
-  create_table "fleamarket_trades", force: :cascade do |t|
-    t.integer "seller_id"
-    t.integer "buyer_id"
     t.integer "trade_status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["buyer_id"], name: "index_fleamarket_trades_on_buyer_id"
-    t.index ["seller_id"], name: "index_fleamarket_trades_on_seller_id"
+    t.index ["user_id"], name: "index_fleamarket_posts_on_user_id"
+  end
+
+  create_table "fleamarket_trade_logs", force: :cascade do |t|
+    t.integer "seller_id"
+    t.integer "buyer_id"
+    t.integer "fleamarket_post_id", null: false
+    t.integer "trade_status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["buyer_id"], name: "index_fleamarket_trade_logs_on_buyer_id"
+    t.index ["fleamarket_post_id"], name: "index_fleamarket_trade_logs_on_fleamarket_post_id"
+    t.index ["seller_id"], name: "index_fleamarket_trade_logs_on_seller_id"
   end
 
   create_table "user_histories", force: :cascade do |t|
@@ -87,6 +89,10 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_24_134812) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "fleamarket_trades", "user", column: "buyer_id"
-  add_foreign_key "fleamarket_trades", "user", column: "seller_id"
+  add_foreign_key "fleamarket_post_images", "fleamarket_posts"
+  add_foreign_key "fleamarket_post_interesteds", "fleamarket_posts"
+  add_foreign_key "fleamarket_post_interesteds", "users"
+  add_foreign_key "fleamarket_trade_logs", "fleamarket_posts"
+  add_foreign_key "fleamarket_trade_logs", "user", column: "buyer_id"
+  add_foreign_key "fleamarket_trade_logs", "user", column: "seller_id"
 end

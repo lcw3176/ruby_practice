@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+#one:
+#  seller: one
+#  fleamarket_post: one
+#  trade_status: 1
+
+#two:
+#  user: two
+#  fleamarket_post: two
+  #  trade_status: 1
