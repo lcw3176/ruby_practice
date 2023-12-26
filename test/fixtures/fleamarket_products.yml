@@ -1,11 +1,43 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+one:
+  user_id: 1
+  id: 1
+  title: 당근 배추 팔아요
+  content: 어제 뽑은 농산품이에요
+  view_count: 0
+  price: 100000
+  category: 식품
+  thumbnail_url: 'https://media.istockphoto.com/id/166106089/ko/%EC%82%AC%EC%A7%84/%EC%86%90%EA%B8%88-%EA%B2%A9%EB%A6%AC%EB%90%A8%EC%97%90.jpg?s=612x612&w=0&k=20&c=Co67pHp2_Oaf0noqvGn4kaKje4UD0z8ifMHY9Ormnvw='
+  fleamarket_trade_id: 1
 
-# This model initially had no columns defined. If you add columns to the
-# model remove the "{}" from the fixture names and add the columns immediately
-# below each fixture, per the syntax in the comments below
-#
-one: {}
-# column: value
-#
-two: {}
-# column: value
+two:
+  user_id: 2
+  id: 2
+  title: 장난감
+  content: 새거에요
+  view_count: 0
+  price: 1000
+  category: 문구
+  thumbnail_url: 'https://media.istockphoto.com/id/166106089/ko/%EC%82%AC%EC%A7%84/%EC%86%90%EA%B8%88-%EA%B2%A9%EB%A6%AC%EB%90%A8%EC%97%90.jpg?s=612x612&w=0&k=20&c=Co67pHp2_Oaf0noqvGn4kaKje4UD0z8ifMHY9Ormnvw='
+  fleamarket_trade_id: 2
+
+three:
+  user_id: 3
+  id: 3
+  title: 볼펜 팔아요
+  content: 한번도 안썼어요
+  view_count: 0
+  price: 500
+  category: 문구
+  thumbnail_url: 'https://media.istockphoto.com/id/166106089/ko/%EC%82%AC%EC%A7%84/%EC%86%90%EA%B8%88-%EA%B2%A9%EB%A6%AC%EB%90%A8%EC%97%90.jpg?s=612x612&w=0&k=20&c=Co67pHp2_Oaf0noqvGn4kaKje4UD0z8ifMHY9Ormnvw='
+  fleamarket_trade_id: 3
+
+four:
+  user_id: 4
+  id: 4
+  title: TV 팔아요
+  content: 이사해야 되서 급처합니다
+  view_count: 0
+  price: 1000000
+  category: 가전
+  thumbnail_url: 'https://media.istockphoto.com/id/166106089/ko/%EC%82%AC%EC%A7%84/%EC%86%90%EA%B8%88-%EA%B2%A9%EB%A6%AC%EB%90%A8%EC%97%90.jpg?s=612x612&w=0&k=20&c=Co67pHp2_Oaf0noqvGn4kaKje4UD0z8ifMHY9Ormnvw='
+  fleamarket_trade_id: 4

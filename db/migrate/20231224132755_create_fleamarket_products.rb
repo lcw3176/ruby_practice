@@ -8,6 +8,7 @@ class CreateFleamarketProducts < ActiveRecord::Migration[7.1]
       t.integer :view_count
       t.integer :price
       t.string :category
+      t.string :thumbnail_url
 
       t.timestamps
     end
