@@ -36,6 +36,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_24_134812) do
     t.integer "view_count"
     t.integer "price"
     t.string "category"
+    t.string "thumbnail_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["fleamarket_trade_id"], name: "index_fleamarket_products_on_fleamarket_trade_id"
