@@ -4,7 +4,6 @@ class CreateFleamarketPosts < ActiveRecord::Migration[7.1]
       t.belongs_to :user
       t.string :title
       t.string :content
-      t.integer :view_count
       t.integer :price
       t.string :category
       t.string :trade_address
