@@ -4,7 +4,7 @@
 
     <article class="media">
       <div class="media-left">
-        <figure class="image is-128x128">
+        <figure class="image is-96x96 is-square">
           <%= image_tag(response.thumbnail_url, :alt => "placeholder") %>
         </figure>
       </div>
@@ -13,7 +13,7 @@
           <p>
             <strong><%= response.title %></strong>
             <br>
-            <small><%= response.trade_address %></small>
+            <small><%= response.trade_address %> * </small>
             <small><%= ((Time.now - response.updated_at) / 60 / 60).floor %>시간 전</small>
             <br>
             <%= response.price %>원
