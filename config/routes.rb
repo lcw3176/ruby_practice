@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "home#index"
+  root "fleamarket#index"
 
   get "/fleamarket", to: "fleamarket#index"
   get "/fleamarket/:id", to: "fleamarket#post"
