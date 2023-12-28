@@ -1,6 +1,6 @@
 require "test_helper"
 
-class FleamarketPostViewTest < ActiveSupport::TestCase
+class FleamarketPostCheckTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

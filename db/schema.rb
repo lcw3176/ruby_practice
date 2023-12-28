@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_26_073233) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_27_143359) do
+  create_table "fleamarket_post_checks", force: :cascade do |t|
+    t.integer "fleamarket_post_id", null: false
+    t.integer "count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["fleamarket_post_id"], name: "index_fleamarket_post_checks_on_fleamarket_post_id"
+  end
+
   create_table "fleamarket_post_images", force: :cascade do |t|
     t.integer "fleamarket_post_id", null: false
     t.string "source_url"
@@ -26,6 +34,16 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_26_073233) do
     t.datetime "updated_at", null: false
     t.index ["fleamarket_post_id"], name: "index_fleamarket_post_interesteds_on_fleamarket_post_id"
     t.index ["user_id"], name: "index_fleamarket_post_interesteds_on_user_id"
+  end
+
+  create_table "fleamarket_post_views", force: :cascade do |t|
+    t.integer "fleamarket_post_id", null: false
+    t.integer "user_id", null: false
+    t.integer "count"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["fleamarket_post_id"], name: "index_fleamarket_post_views_on_fleamarket_post_id"
+    t.index ["user_id"], name: "index_fleamarket_post_views_on_user_id"
   end
 
   create_table "fleamarket_posts", force: :cascade do |t|
@@ -89,9 +107,12 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_26_073233) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "fleamarket_post_checks", "fleamarket_posts"
   add_foreign_key "fleamarket_post_images", "fleamarket_posts"
   add_foreign_key "fleamarket_post_interesteds", "fleamarket_posts"
   add_foreign_key "fleamarket_post_interesteds", "users"
+  add_foreign_key "fleamarket_post_views", "fleamarket_posts"
+  add_foreign_key "fleamarket_post_views", "users"
   add_foreign_key "fleamarket_trade_logs", "fleamarket_posts"
   add_foreign_key "fleamarket_trade_logs", "user", column: "buyer_id"
   add_foreign_key "fleamarket_trade_logs", "user", column: "seller_id"
