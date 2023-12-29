@@ -1,58 +1,27 @@
-<div class="columns mt-5">
-  <div class="column is-3">
-
+<div class="card is-shadowless">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <%= image_tag(@post.thumbnail_url, :alt => "placeholder") %>
+    </figure>
   </div>
-  <div class="column mt-5 has-text-centered">
+  <div class="card-content">
+    <div class="content has-text-left">
+      <p class="subtitle is-5"><%= @post.title %></p>
 
-    <div class="columns">
+      <small><%= @post.category %> * </small>
+      <small><%= ((Time.now - @post.updated_at) / 60 / 60).floor %>시간 전</small>
 
-      <div class="column is-2">
-
-      </div>
-
-      <div class="column">
-
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <%= image_tag(@post.thumbnail_url, :alt => "placeholder") %>
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content has-text-left">
-              <p class="subtitle is-5"><%= @post.title %></p>
-
-              <small><%= @post.category %> * </small>
-              <small><%= ((Time.now - @post.updated_at) / 60 / 60).floor %>시간 전</small>
-
-              <p><%= @post.content %></p>
+      <p><%= @post.content %></p>
 
 
-              <p>거래희망장소 <%= @post.trade_address %></p>
-              <!--              <p><%#= @response.price %>원</p>-->
+      <p>거래희망장소 <%= @post.trade_address %></p>
+      <!--              <p><%#= @response.price %>원</p>-->
 
-              <small>관심 <%= @post.fleamarket_post_interested.count %> * </small>
-              <small>조회 <%= @check_count %></small>
-
-            </div>
-
-
-          </div>
-        </div>
-
-
-      </div>
-
-      <div class="column is-2">
-
-      </div>
+      <small>관심 <%= @post.fleamarket_post_interested.count %> * </small>
+      <small>조회 <%= @check_count %></small>
 
     </div>
 
-
-  </div>
-
-  <div class="column is-3">
 
   </div>
 </div>
