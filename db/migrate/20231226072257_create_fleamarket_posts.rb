@@ -8,7 +8,6 @@ class CreateFleamarketPosts < ActiveRecord::Migration[7.1]
       t.string :category
       t.string :trade_address
       t.string :thumbnail_url
-      t.integer :trade_status
 
       t.timestamps
     end
