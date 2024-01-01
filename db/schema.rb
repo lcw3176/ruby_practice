@@ -36,21 +36,10 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_27_143359) do
     t.index ["user_id"], name: "index_fleamarket_post_interesteds_on_user_id"
   end
 
-  create_table "fleamarket_post_views", force: :cascade do |t|
-    t.integer "fleamarket_post_id", null: false
-    t.integer "user_id", null: false
-    t.integer "count"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["fleamarket_post_id"], name: "index_fleamarket_post_views_on_fleamarket_post_id"
-    t.index ["user_id"], name: "index_fleamarket_post_views_on_user_id"
-  end
-
   create_table "fleamarket_posts", force: :cascade do |t|
     t.integer "user_id"
     t.string "title"
     t.string "content"
-    t.integer "view_count"
     t.integer "price"
     t.string "category"
     t.string "trade_address"
@@ -111,8 +100,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_27_143359) do
   add_foreign_key "fleamarket_post_images", "fleamarket_posts"
   add_foreign_key "fleamarket_post_interesteds", "fleamarket_posts"
   add_foreign_key "fleamarket_post_interesteds", "users"
-  add_foreign_key "fleamarket_post_views", "fleamarket_posts"
-  add_foreign_key "fleamarket_post_views", "users"
   add_foreign_key "fleamarket_trade_logs", "fleamarket_posts"
   add_foreign_key "fleamarket_trade_logs", "user", column: "buyer_id"
   add_foreign_key "fleamarket_trade_logs", "user", column: "seller_id"
