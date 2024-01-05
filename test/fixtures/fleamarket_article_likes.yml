@@ -1,9 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user: one
-  fleamarket_article: one
+  id: 1
+  user_id: 1
+  fleamarket_article_id: 1
 
 two:
-  user: two
-  fleamarket_article: two
+  id: 2
+  user_id: 2
+  fleamarket_article_id: 1

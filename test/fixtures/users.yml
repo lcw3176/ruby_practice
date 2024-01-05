@@ -1,7 +1,32 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  manner_degree: 1.5
+  id: 1
+  status: normal
+  manner_degree: 36.5
 
 two:
-  manner_degree: 1.5
+  id: 2
+  status: normal
+  manner_degree: 36.5
+
+three:
+  id: 3
+  status: normal
+  manner_degree: 38.1
+
+four:
+  id: 4
+  status: normal
+  manner_degree: 22.1
+
+five:
+  id: 5
+  status: normal
+  manner_degree: 25.2
+
+six:
+  id: 6
+  status: normal
+  manner_degree: 90.7
+
