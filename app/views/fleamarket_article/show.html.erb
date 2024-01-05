@@ -17,7 +17,7 @@
       <p>거래희망장소 <%= @article.trade_address %></p>
       <!--              <p><%#= @response.price %>원</p>-->
 
-      <small>관심 <%= @like_count %> * </small>
+      <small>관심 <%= @article.fleamarket_article_likes.count %> * </small>
       <small>조회 <%= @article.read_count %></small>
 
     </div>

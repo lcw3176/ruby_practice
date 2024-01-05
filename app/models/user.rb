@@ -1,3 +1,3 @@
 class User < ApplicationRecord
-  enum :status, [:normal, :bad, :sleep]
+  enum :status, [:normal, :bad]
 end

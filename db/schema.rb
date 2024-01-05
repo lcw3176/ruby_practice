@@ -43,19 +43,12 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_05_015312) do
     t.index ["user_id"], name: "index_fleamarket_articles_on_user_id"
   end
 
-  create_table "user_privates", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.string "phone_number"
-    t.string "address"
-    t.string "nickname"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_user_privates_on_user_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.float "manner_degree"
     t.integer "status"
+    t.string "phone_number"
+    t.string "address"
+    t.string "nickname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -64,5 +57,4 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_05_015312) do
   add_foreign_key "fleamarket_article_likes", "fleamarket_articles"
   add_foreign_key "fleamarket_article_likes", "users"
   add_foreign_key "fleamarket_articles", "users"
-  add_foreign_key "user_privates", "users"
 end
