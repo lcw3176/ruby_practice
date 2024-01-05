@@ -1,2 +1,0 @@
-class NearbyStoresController < ApplicationController
-end
