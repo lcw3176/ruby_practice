@@ -1,0 +1,2 @@
+class FleamarketArticleController < ApplicationController
+end
