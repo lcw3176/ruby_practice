@@ -4,7 +4,6 @@ class CreateUserPrivates < ActiveRecord::Migration[7.1]
       t.belongs_to :user, null: false, foreign_key: true
       t.string :phone_number
       t.string :address
-      t.integer :status
       t.string :nickname
 
       t.timestamps
