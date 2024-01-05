@@ -1,0 +1,27 @@
+<% @fleamarket_articles.each do |article| %>
+
+  <a class="box is-shadowless" href="/fleamarket/<%= article.id.to_s %>">
+
+    <article class="media">
+      <div class="media-left">
+        <figure class="image is-96x96 is-square">
+          <%= image_tag(article.thumbnail_url, :alt => "placeholder") %>
+        </figure>
+      </div>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <strong><%= article.title %></strong>
+            <br>
+            <small><%= article.trade_address %> * </small>
+            <small><%= ((Time.now - article.updated_at) / 60 / 60).floor %>시간 전</small>
+            <br>
+            <%= article.read_attribute_before_type_cast(:trade_status) == FleamarketArticle.trade_statuses[:wait] ? "" : "블라블라" %> <%= article.price %>
+            원
+          </p>
+        </div>
+      </div>
+    </article>
+  </a>
+
+<% end %>

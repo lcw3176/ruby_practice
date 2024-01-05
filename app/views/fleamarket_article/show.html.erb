@@ -1,0 +1,27 @@
+<div class="card is-shadowless">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <%= image_tag(@article.thumbnail_url, :alt => "placeholder") %>
+    </figure>
+  </div>
+  <div class="card-content">
+    <div class="content has-text-left">
+      <p class="subtitle is-5"><%= @article.title %></p>
+
+      <small><%= @article.category %> * </small>
+      <small><%= ((Time.now - @article.updated_at) / 60 / 60).floor %>시간 전</small>
+
+      <p><%= @article.content %></p>
+
+
+      <p>거래희망장소 <%= @article.trade_address %></p>
+      <!--              <p><%#= @response.price %>원</p>-->
+
+      <small>관심 <%= @like_count %> * </small>
+      <small>조회 <%= @article.read_count %></small>
+
+    </div>
+
+
+  </div>
+</div>
