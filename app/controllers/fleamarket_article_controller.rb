@@ -4,11 +4,12 @@ class FleamarketArticleController < ApplicationController
   end
 
   def show
-    @article = FleamarketArticle.find(params[:id])
-    @article.read_count += 1
-    !@article.save
-  end
+    @article = FleamarketArticle.find_by(id: params[:id])
 
+    raise ActiveRecord::RecordNotFound.new if @article.nil?
+
+    FleamarketArticle::UpdateReadCountJob.perform_later(@article.id)
+  end
 
   # def new
   #   @article = Article.new
@@ -23,6 +24,5 @@ class FleamarketArticleController < ApplicationController
   #     render :new, status: :unprocessable_entity
   #   end
   # end
-
 
 end
