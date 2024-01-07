@@ -35,9 +35,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_05_015312) do
     t.integer "price"
     t.integer "category"
     t.string "trade_address"
-    t.string "thumbnail_url"
-    t.integer "trade_status"
-    t.integer "read_count"
+    t.string "thumbnail_url", default: "https://avatars.githubusercontent.com/u/59993347?v=4"
+    t.integer "trade_status", default: 2
+    t.integer "read_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_fleamarket_articles_on_user_id"
