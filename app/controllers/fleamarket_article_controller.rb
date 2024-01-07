@@ -1,6 +1,6 @@
 class FleamarketArticleController < ApplicationController
   def index
-    @fleamarket_articles = FleamarketArticle.order(:created_at).last(10).reverse
+    @fleamarket_articles = FleamarketArticle.order(:id).last(10).reverse
   end
 
   def show
@@ -23,11 +23,9 @@ class FleamarketArticleController < ApplicationController
                                      trade_address: "hello동",
                                      category: FleamarketArticle.categories[:etc_used])
 
-    if @article.save
-      redirect_to fleamarket_articles_url
-    else
-      raise ActiveRecord::RecordNotSaved.new
-    end
+    raise ActiveRecord::RecordNotSaved.new unless @article.save
+
+    redirect_to fleamarket_articles_url
   end
 
 end
