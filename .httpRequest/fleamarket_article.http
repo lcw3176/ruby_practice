@@ -9,3 +9,8 @@ GET localhost:3000/sdgdsgsdg
 ###
 
 POST localhost:3000/fleamarket/articles/register
+
+###
+
+GET localhost:3000/fleamarket/articles/111111111111111111111111
+# 404
