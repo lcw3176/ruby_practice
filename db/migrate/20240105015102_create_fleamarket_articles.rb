@@ -1,6 +1,7 @@
 class CreateFleamarketArticles < ActiveRecord::Migration[7.1]
   def change
-    create_table :fleamarket_articles do |t|
+    create_table :fleamarket_articles, id: :bigint, primary_key: [:id] do |t|
+      t.bigint :id, null: false, auto_increment: true
       t.belongs_to :user, null: false, foreign_key: true
       t.string :title
       t.string :content

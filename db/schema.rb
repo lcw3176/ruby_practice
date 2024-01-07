@@ -43,7 +43,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_05_015312) do
     t.index ["user_id"], name: "index_fleamarket_articles_on_user_id"
   end
 
-  create_table "users", id: :bigint, default: nil, charset: "utf8mb3", force: :cascade do |t|
+  create_table "users", charset: "utf8mb3", force: :cascade do |t|
     t.float "manner_degree", default: 36.5
     t.integer "status"
     t.string "phone_number"
