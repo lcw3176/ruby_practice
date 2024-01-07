@@ -14,7 +14,7 @@
             <strong><%= article.title %></strong>
             <br>
             <small><%= article.trade_address %> * </small>
-            <small><%= ((Time.now - article.updated_at) / 60 / 60).floor %>시간 전</small>
+            <small><%= ((Time.now - article.created_at) / 60 / 60).floor %>시간 전</small>
             <br>
             <%= article.read_attribute_before_type_cast(:trade_status) == FleamarketArticle.trade_statuses[:wait] ? "" : "블라블라" %> <%= article.price %>
             원
