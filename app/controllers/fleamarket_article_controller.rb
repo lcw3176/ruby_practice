@@ -6,7 +6,7 @@ class FleamarketArticleController < ApplicationController
   def show
     @article = FleamarketArticle.find_by(id: params[:id])
 
-    raise ActiveRecord::RecordNotFound.new if @article.nil?
+    raise ActiveRecord::RecordNotFound.new if @article.nil? || @article.id.blank?
 
     FleamarketArticle::UpdateReadCountJob.perform_later(@article.id)
   end
