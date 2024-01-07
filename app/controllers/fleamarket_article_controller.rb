@@ -1,6 +1,6 @@
 class FleamarketArticleController < ApplicationController
   def index
-    @fleamarket_articles = FleamarketArticle.order(:created_at).reverse.last(10)
+    @fleamarket_articles = FleamarketArticle.order(:created_at).last(10).reverse
   end
 
   def show
@@ -11,18 +11,22 @@ class FleamarketArticleController < ApplicationController
     FleamarketArticle::UpdateReadCountJob.perform_later(@article.id)
   end
 
-  # def new
-  #   @article = Article.new
-  # end
-  #
-  # def create
-  #   @article = Article.new(title: "...", body: "...")
-  #
-  #   if @article.save
-  #     redirect_to @article
-  #   else
-  #     render :new, status: :unprocessable_entity
-  #   end
-  # end
+  def new
+    @article = Article.new
+  end
+
+  def create
+    @article = FleamarketArticle.new(user_id: 1,
+                                     title: "...",
+                                     content:  "...",
+                                     price: 100,
+                                     trade_address: "hello동")
+
+    if @article.save
+      redirect_to fleamarket_articles_url
+    else
+      raise ActiveRecord::RecordNotSaved.new
+    end
+  end
 
 end
