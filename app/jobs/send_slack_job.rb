@@ -1,5 +1,5 @@
 class SendSlackJob < ApplicationJob
-  queue_as :within_1_hour
+  queue_as :alert_queue
 
   def perform(channel:, message:)
     # 슬랙 클라이언트 코드
