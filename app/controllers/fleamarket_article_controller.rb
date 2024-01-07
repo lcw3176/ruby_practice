@@ -20,7 +20,8 @@ class FleamarketArticleController < ApplicationController
                                      title: "...",
                                      content:  "...",
                                      price: 100,
-                                     trade_address: "hello동")
+                                     trade_address: "hello동",
+                                     category: FleamarketArticle.categories[:etc_used])
 
     if @article.save
       redirect_to fleamarket_articles_url
