@@ -51,6 +51,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_05_015312) do
     t.string "nickname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["id"], name: "ix_primary_key"
   end
 
   add_foreign_key "fleamarket_article_images", "fleamarket_articles"
