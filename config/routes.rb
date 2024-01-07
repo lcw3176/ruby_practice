@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root "fleamarket_article#index"
 
-  get "/fleamarket", to: "fleamarket_article#index"
-  get "/fleamarket/:id", to: "fleamarket_article#show"
+  get "/fleamarket/articles", to: "fleamarket_article#index"
+  get "/fleamarket/articles/:id", to: "fleamarket_article#show"
+
+  get "/fleamarket/articles/register", to: "fleamarket_article#new"
+  post "/fleamarket/articles/register", to: "fleamarket_article#create"
 
 end
