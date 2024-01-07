@@ -3,3 +3,7 @@ GET localhost:3000/sdgdsgsdg.json
 ###
 
 GET localhost:3000/sdgdsgsdg
+
+###
+
+POST localhost:3000/fleamarket/articles/register
