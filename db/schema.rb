@@ -11,25 +11,25 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.1].define(version: 2024_01_05_015312) do
-  create_table "fleamarket_article_images", force: :cascade do |t|
-    t.integer "fleamarket_article_id", null: false
+  create_table "fleamarket_article_images", charset: "utf8mb3", force: :cascade do |t|
+    t.bigint "fleamarket_article_id", null: false
     t.string "source_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["fleamarket_article_id"], name: "index_fleamarket_article_images_on_fleamarket_article_id"
   end
 
-  create_table "fleamarket_article_likes", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "fleamarket_article_id", null: false
+  create_table "fleamarket_article_likes", charset: "utf8mb3", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "fleamarket_article_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["fleamarket_article_id"], name: "index_fleamarket_article_likes_on_fleamarket_article_id"
     t.index ["user_id"], name: "index_fleamarket_article_likes_on_user_id"
   end
 
-  create_table "fleamarket_articles", force: :cascade do |t|
-    t.integer "user_id", null: false
+  create_table "fleamarket_articles", charset: "utf8mb3", force: :cascade do |t|
+    t.bigint "user_id", null: false
     t.string "title"
     t.string "content"
     t.integer "price"
@@ -43,15 +43,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_05_015312) do
     t.index ["user_id"], name: "index_fleamarket_articles_on_user_id"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.float "manner_degree"
+  create_table "users", id: :bigint, default: nil, charset: "utf8mb3", force: :cascade do |t|
+    t.float "manner_degree", default: 36.5
     t.integer "status"
     t.string "phone_number"
     t.string "address"
     t.string "nickname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["id"], name: "ix_primary_key"
   end
 
   add_foreign_key "fleamarket_article_images", "fleamarket_articles"
