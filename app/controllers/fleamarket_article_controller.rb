@@ -16,14 +16,12 @@ class FleamarketArticleController < ApplicationController
   end
 
   def create
-    @article = FleamarketArticle.new(user_id: 1,
-                                     title: "...",
-                                     content:  "...",
-                                     price: 100,
-                                     trade_address: "hello동",
-                                     category: FleamarketArticle.categories[:etc_used])
-
-    raise ActiveRecord::RecordNotSaved.new unless @article.save
+    FleamarketArticle::AddArticleJob.perform_later(user_id: 122,
+                                                   title: "...",
+                                                   content: "...",
+                                                   price: 100,
+                                                   trade_address: "hello",
+                                                   category: FleamarketArticle.categories[:etc_used])
 
     redirect_to fleamarket_articles_url
   end

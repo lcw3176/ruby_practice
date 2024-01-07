@@ -10,11 +10,11 @@ class ErrorsController < ApplicationController
 
     elsif status >= 400 && status <= 407
       @message = I18n.t("error_page.message.else")
-
     end
 
-    SendSlackJob.perform_later(channel: "error", message: wrapper.message)
-    
+
+    SendSlackJob.perform_later(channel: "error", status: status, message: wrapper.message)
+
     error = {
       status: {
         code: "service_not_available",
