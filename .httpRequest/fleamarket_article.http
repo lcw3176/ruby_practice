@@ -1,8 +1,10 @@
 GET localhost:3000/sdgdsgsdg.json
+# 404, json 포맷
 
 ###
 
 GET localhost:3000/sdgdsgsdg
+# 404, html 포맷
 
 ###
 
