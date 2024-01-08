@@ -1,14 +1,14 @@
 class FleamarketArticle::AddArticleJob < ApplicationJob
   queue_as :mysql_queue
 
-  def perform(user_id: , title: , content:, price:, trade_address:, category:)
-    article = FleamarketArticle.new(user_id: user_id,
-                                    title: title,
-                                    content:  content,
-                                    price: price,
-                                    trade_address: trade_address,
-                                    category: category)
-
+  def perform(params)
+    article = FleamarketArticle.new(user_id: params[:user_id],
+                                    title: params[:title],
+                                    content:  params[:content],
+                                    price: params[:price],
+                                    trade_address: params[:trade_address],
+                                    category: params[:category])
+    # :user_id, :title, :content, :price, :trade_address, :category
     raise ActiveRecord::RecordNotSaved.new unless article.save
 
   end
