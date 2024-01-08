@@ -8,7 +8,7 @@ GET localhost:3000/sdgdsgsdg
 
 ###
 # 게시글 생성 테스트
-POST localhost:3000/fleamarket/articles/register
+POST localhost:3000/fleamarket/articles
 Content-Type: application/json
 
 {
@@ -21,6 +21,12 @@ Content-Type: application/json
     "category": "etc_used"
   }
 }
+
+###
+# 게시글 조회 테스트
+GET localhost:3000/fleamarket/articles/1
+
+
 ###
 # 잘못된 게시글 조회 테스트
 GET localhost:3000/fleamarket/articles/111111111111111111111111

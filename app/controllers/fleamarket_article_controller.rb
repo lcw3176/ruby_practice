@@ -7,10 +7,12 @@ class FleamarketArticleController < ApplicationController
 
   def show
     article = FleamarketArticle.find_by(id: params[:id])
-    raise ActiveRecord::RecordNotFound.new if @article.nil? || @article.id.blank?
-    FleamarketArticle::UpdateReadCountJob.perform_later(@article.id)
+    raise ActiveRecord::RecordNotFound.new if article.nil? || article.id.blank?
+    FleamarketArticle::UpdateReadCountJob.perform_later(article.id)
 
-    render json: article, status: 200
+    render json: {
+      article: article
+    }, status: 200
   end
 
   # ui 관련이므로 일단 뺌
@@ -21,14 +23,14 @@ class FleamarketArticleController < ApplicationController
   def create
     FleamarketArticle::AddArticleJob.perform_later(fleamarket_article_params)
 
-    render status: 200
+    render json: "success",status: 200
   end
 
-  def patch
+  def update
 
   end
 
-  def delete
+  def destroy
 
   end
 
