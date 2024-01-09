@@ -14,3 +14,10 @@ Content-Type: application/json
     "article_id": 4
   }
 }
+
+
+###
+# 게시글 좋아요 취소하기
+DELETE localhost:3000/user/1/article/4/like.json
+Content-Type: application/json
+
