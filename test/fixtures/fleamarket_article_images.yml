@@ -1,18 +1,22 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   source_url: 'https://media.istockphoto.com/id/166106089/ko/%EC%82%AC%EC%A7%84/%EC%86%90%EA%B8%88-%EA%B2%A9%EB%A6%AC%EB%90%A8%EC%97%90.jpg?s=612x612&w=0&k=20&c=Co67pHp2_Oaf0noqvGn4kaKje4UD0z8ifMHY9Ormnvw='
   fleamarket_article_id: 1
 
 two:
+  id: 2
   source_url: 'https://media.istockphoto.com/id/166106089/ko/%EC%82%AC%EC%A7%84/%EC%86%90%EA%B8%88-%EA%B2%A9%EB%A6%AC%EB%90%A8%EC%97%90.jpg?s=612x612&w=0&k=20&c=Co67pHp2_Oaf0noqvGn4kaKje4UD0z8ifMHY9Ormnvw='
   fleamarket_article_id: 2
 
 three:
+  id: 3
   source_url: 'https://media.istockphoto.com/id/166106089/ko/%EC%82%AC%EC%A7%84/%EC%86%90%EA%B8%88-%EA%B2%A9%EB%A6%AC%EB%90%A8%EC%97%90.jpg?s=612x612&w=0&k=20&c=Co67pHp2_Oaf0noqvGn4kaKje4UD0z8ifMHY9Ormnvw='
   fleamarket_article_id: 3
 
 four:
+  id: 4
   source_url: 'https://media.istockphoto.com/id/166106089/ko/%EC%82%AC%EC%A7%84/%EC%86%90%EA%B8%88-%EA%B2%A9%EB%A6%AC%EB%90%A8%EC%97%90.jpg?s=612x612&w=0&k=20&c=Co67pHp2_Oaf0noqvGn4kaKje4UD0z8ifMHY9Ormnvw='
   fleamarket_article_id: 4
 

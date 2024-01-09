@@ -7,7 +7,8 @@ class FleamarketArticleController < ApplicationController
 
   def show
     article = FleamarketArticle.find(params[:id])
-    article.increment(:read_count, 1).save
+
+    article.increment!(:read_count, 1)
 
     render json: make_success_format(code: "success", contents: article), status: 200
   end

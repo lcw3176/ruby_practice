@@ -1,7 +1,7 @@
 class FleamarketArticle < ApplicationRecord
   belongs_to :user
+  belongs_to :fleamarket_address_matcher
 
-  has_many :address_codes
   has_many :fleamarket_article_likes
 
   enum :trade_status, [:done, :in_progress, :sell]

@@ -10,11 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_09_040937) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_09_071513) do
   create_table "address_codes", charset: "utf8mb3", force: :cascade do |t|
     t.integer "code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "fleamarket_address_matchers", charset: "utf8mb3", force: :cascade do |t|
+    t.bigint "fleamarket_article_id", null: false
+    t.bigint "address_code_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["address_code_id"], name: "index_fleamarket_address_matchers_on_address_code_id"
+    t.index ["fleamarket_article_id"], name: "index_fleamarket_address_matchers_on_fleamarket_article_id"
   end
 
   create_table "fleamarket_article_images", charset: "utf8mb3", force: :cascade do |t|
@@ -45,7 +54,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_09_040937) do
     t.integer "trade_status", default: 2
     t.integer "read_count", default: 0
     t.boolean "visible", default: false
-    t.timestamp "published_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_fleamarket_articles_on_user_id"
@@ -61,6 +69,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_09_040937) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "fleamarket_address_matchers", "address_codes"
+  add_foreign_key "fleamarket_address_matchers", "fleamarket_articles"
   add_foreign_key "fleamarket_article_images", "fleamarket_articles"
   add_foreign_key "fleamarket_article_likes", "fleamarket_articles"
   add_foreign_key "fleamarket_article_likes", "users"
