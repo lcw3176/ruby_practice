@@ -18,7 +18,6 @@ class CreateFleamarketArticles < ActiveRecord::Migration[7.1]
 
       t.boolean :visible , default: false # 숨김처리 여부
 
-      t.timestamp :published_at # 발행일
       t.timestamps
     end
   end

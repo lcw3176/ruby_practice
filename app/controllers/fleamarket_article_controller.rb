@@ -7,15 +7,15 @@ class FleamarketArticleController < ApplicationController
 
   def show
     article = FleamarketArticle.find(params[:id])
-
-    FleamarketArticle::UpdateReadCountJob.perform_later(article.id)
+    article.increment(:read_count, 1).save
 
     render json: make_success_format(code: "success", contents: article), status: 200
   end
 
 
   def create
-    FleamarketArticle::AddArticleJob.perform_later(fleamarket_article_params)
+    article = FleamarketArticle.new(fleamarket_article_params)
+    article.save
 
     render json: make_success_format(code: "success"), status: 200
   end
@@ -23,7 +23,6 @@ class FleamarketArticleController < ApplicationController
   # find vs find_by
   def update
     article = FleamarketArticle.find(params[:id])
-
     article.update(fleamarket_article_params)
 
     render json: make_success_format(code: "success"), status: 200
