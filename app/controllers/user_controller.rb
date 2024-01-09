@@ -7,7 +7,7 @@ class UserController < ApplicationController
 
   def create
     likes = FleamarketArticleLike.new(user_id: params[:user_id],
-                              fleamarket_article_id: params[:article][:article_id])
+                              fleamarket_article_id: params[:article_id])
     likes.save
 
     render json: response_format(contents: likes), status: :ok

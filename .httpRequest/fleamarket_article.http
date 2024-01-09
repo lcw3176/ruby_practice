@@ -19,14 +19,12 @@ POST localhost:3000/fleamarket/articles.json
 Content-Type: application/json
 
 {
-  "article": {
-    "user_id": "1",
-    "title" : "new",
-    "content" : "new",
-    "price" : 10000,
-    "trade_address": "mars",
-    "category": "etc_used"
-  }
+  "user_id": "1",
+  "title" : "new",
+  "content" : "new",
+  "price" : 10000,
+  "trade_address": "mars",
+  "category": "etc_used"
 }
 
 ###
@@ -35,14 +33,12 @@ PUT localhost:3000/fleamarket/articles/1.json
 Content-Type: application/json
 
 {
-  "article": {
-    "user_id": "1",
-    "title" : "modified",
-    "content" : "modified",
-    "price" : 100000,
-    "trade_address": "mars",
-    "category": "etc_used"
-  }
+  "user_id": "1",
+  "title" : "modified",
+  "content" : "modified",
+  "price" : 100000,
+  "trade_address": "mars",
+  "category": "etc_used"
 }
 
 ###

@@ -10,9 +10,7 @@ POST localhost:3000/user/1/article/like.json
 Content-Type: application/json
 
 {
-  "article": {
-    "article_id": 4
-  }
+  "article_id": 4
 }
 
 
