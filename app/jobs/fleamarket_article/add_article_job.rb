@@ -7,8 +7,9 @@ class FleamarketArticle::AddArticleJob < ApplicationJob
                                     content:  params[:content],
                                     price: params[:price],
                                     trade_address: params[:trade_address],
-                                    category: params[:category])
-    # :user_id, :title, :content, :price, :trade_address, :category
+                                    category: params[:category],
+                                    published_date: Time.now)
+
     raise ActiveRecord::RecordNotSaved.new unless article.save
 
   end

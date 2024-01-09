@@ -2,42 +2,43 @@ class FleamarketArticleController < ApplicationController
   def index
     articles = FleamarketArticle.order(:id).last(10).reverse
 
-    render json: articles, status: 200
+    render json: make_success_format(code: "success", contents: articles), status: 200
   end
 
   def show
-    article = FleamarketArticle.find_by(id: params[:id])
-    raise ActiveRecord::RecordNotFound.new if article.nil? || article.id.blank?
+    article = FleamarketArticle.find(params[:id])
+
     FleamarketArticle::UpdateReadCountJob.perform_later(article.id)
 
-    render json: {
-      article: article
-    }, status: 200
+    render json: make_success_format(code: "success", contents: article), status: 200
   end
 
-  # ui 관련이므로 일단 뺌
-  # def new
-    # @article = FleamarketArticle.new
-  # end
 
   def create
     FleamarketArticle::AddArticleJob.perform_later(fleamarket_article_params)
 
-    render json: "success",status: 200
+    render json: make_success_format(code: "success"), status: 200
   end
 
+  # find vs find_by
   def update
+    article = FleamarketArticle.find(params[:id])
 
+    article.update(fleamarket_article_params)
+
+    render json: make_success_format(code: "success"), status: 200
   end
 
   def destroy
+    FleamarketArticle.destroy(params[:id])
 
+    render json: make_success_format(code: "success"), status: 200
   end
-
 
   private
 
   def fleamarket_article_params
-    params.require(:article).permit(:user_id, :title, :content, :price, :trade_address, :category)
+    params.require(:article).permit(:id, :user_id, :title, :content, :price, :trade_address, :category)
   end
+
 end

@@ -7,7 +7,7 @@ class FleamarketArticle::UpdateReadCountJob < ApplicationJob
   def perform(article_id)
     article = FleamarketArticle.find_by(article_id: article_id)
 
-    raise ActiveRecord::RecordNotFound.new if article.nil? || article.id.blank?
+    raise ActiveRecord::RecordNotFound.new if article.nil?
 
     article.increment(:read_count, 1).save
   end

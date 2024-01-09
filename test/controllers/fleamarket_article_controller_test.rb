@@ -6,4 +6,6 @@ class FleamarketArticleControllerTest < ActionDispatch::IntegrationTest
     get "/fleamarket/1"
     assert_response :success
   end
+
+
 end

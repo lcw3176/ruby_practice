@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_05_015312) do
+ActiveRecord::Schema[7.1].define(version: 2024_01_09_040937) do
+  create_table "address_codes", charset: "utf8mb3", force: :cascade do |t|
+    t.integer "code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "fleamarket_article_images", charset: "utf8mb3", force: :cascade do |t|
     t.bigint "fleamarket_article_id", null: false
     t.string "source_url"
@@ -32,12 +38,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_05_015312) do
     t.bigint "user_id", null: false
     t.string "title"
     t.string "content"
-    t.integer "price"
-    t.integer "category"
     t.string "trade_address"
     t.string "thumbnail_url", default: "https://avatars.githubusercontent.com/u/59993347?v=4"
+    t.integer "price"
+    t.integer "category"
     t.integer "trade_status", default: 2
     t.integer "read_count", default: 0
+    t.boolean "visible", default: false
+    t.timestamp "published_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_fleamarket_articles_on_user_id"
