@@ -1,0 +1,2 @@
+class FleamarketTradeLogController < ApplicationController
+end
