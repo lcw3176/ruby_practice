@@ -1,0 +1,4 @@
+###
+# 좋아요 한 게시글 조회 테스트
+GET localhost:3000/fleamarket/articles/like
+Content-Type: application/json

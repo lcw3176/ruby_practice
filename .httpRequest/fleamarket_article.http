@@ -31,7 +31,7 @@ Content-Type: application/json
 
 ###
 # 게시글 수정 테스트
-PATCH localhost:3000/fleamarket/articles/1.json
+PUT localhost:3000/fleamarket/articles/1.json
 Content-Type: application/json
 
 {

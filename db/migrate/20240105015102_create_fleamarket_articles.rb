@@ -16,7 +16,7 @@ class CreateFleamarketArticles < ActiveRecord::Migration[7.1]
       t.integer :read_count, default: 0 # 게시글 조회수
 
 
-      t.boolean :visible , default: false # 숨김처리 여부
+      t.boolean :visible , default: true # 글 보이기, 숨김처리 여부
 
       t.timestamps
     end

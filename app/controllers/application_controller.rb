@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   skip_before_action :verify_authenticity_token
 
-  def make_success_format(code: , message: "", contents: "")
+  def response_format(code: "success", message: "", contents: "")
     {
       status: {
         code: code,
