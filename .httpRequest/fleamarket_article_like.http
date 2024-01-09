@@ -1,4 +1,9 @@
 ###
-# 좋아요 한 게시글 조회 테스트
-GET localhost:3000/fleamarket/articles/like
+# 게시글 좋아요
+POST localhost:3000/fleamarket/articles/like.json
 Content-Type: application/json
+
+{
+  "user_id": 1,
+  "article_id": 2
+}
