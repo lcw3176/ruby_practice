@@ -7,10 +7,13 @@ Rails.application.routes.draw do
   put "/fleamarket/articles/:id", to: "fleamarket_article#update" # 게시글 수정
   delete "/fleamarket/articles/:id", to: "fleamarket_article#destroy" # 게시글 삭제
 
+  get "/fleamarket/user/:user_id/article/like", to: "fleamarket_article_likes#index" # 유저가 좋아요한 게시글 목록 보여주기
   post "/fleamarket/articles/like", to: "fleamarket_article_likes#create" # 게시글 좋아요
+  delete "/fleamarket/articles/like/:article_id", to: "fleamarket_article_likes#destroy" # 좋아요 해제하기
 
-  get "/user/:user_id/article/like", to: "user#index" # 유저가 좋아요한 게시글 목록 보여주기
-  post "/user/:user_id/article/like", to: "user#create" # 좋아요 등록하기
-  delete "/user/:user_id/article/:article_id/like", to: "user#destroy" # 좋아요 해제하기
+    get "/user/:user_id/article/buy", to: "user_article_buy#index" # 유저 구매 게시글 목록
+  get "/user/:user_id/article/sell", to: "user_article_sell#index" # 유저 판매 게시글 목록
+
+
 
 end
