@@ -1,8 +1,13 @@
 class ErrorsController < ApplicationController
 
+  after_action :alert
+
   def show
     wrapper = ActionDispatch::ExceptionWrapper.new(request.env, request.env["action_dispatch.exception"])
     status = wrapper.status_code
+
+    @alert_status = status
+    @alert_message = wrapper.message
 
     @message = I18n.t("error_page.message.normal")
     if status == 404
@@ -12,8 +17,6 @@ class ErrorsController < ApplicationController
       @message = I18n.t("error_page.message.else")
     end
 
-
-    SendSlackJob.perform_later(channel: "error", status: status, message: wrapper.message)
 
     error = {
       status: {
@@ -26,5 +29,10 @@ class ErrorsController < ApplicationController
       format.json { render json: error, status: status }
       format.any { head :not_acceptable }
     end
+  end
+
+
+  def alert
+    SendSlackJob.perform_later(channel: "error", status: @alert_status , message: @alert_message)
   end
 end

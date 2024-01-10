@@ -17,11 +17,9 @@ class ApplicationController < ActionController::Base
 
 
   def get_auth
-    # if request.headers["Authorization"].blank?
-    #   return render json: response_format, status: :unauthorized
-    # end
+    return render json: response_format(code: "failed"), status: :unauthorized if request.headers["Authorization"].blank?
 
-    # @user_auth_id = request.headers["Authorization"]
+    @user_auth_id = request.headers["Authorization"]
     @user_auth_id = 1
   end
 

@@ -2,27 +2,26 @@ class FleamarketArticleController < ApplicationController
 
   def index
     user = User.find(@user_auth_id)
-    @articles = FleamarketArticle.joins(:fleamarket_address_matcher)
-                                .where(:wanna_trade_address => user.address)
+    articles = FleamarketAddressMatcher.joins(:fleamarket_article)
+                                .where(:address_codes => user.address)
                                 .order(:id)
                                 .last(DEFAULT_READ_SIZE)
                                 .reverse
 
-    # render json: response_format(contents: articles), status: :ok
+    render json: response_format(contents: articles), status: :ok
   end
 
   def show
-    @article = FleamarketArticle.find(params[:id])
-    @article.read_count += 1
-    @article.save
+    article = FleamarketArticle.find(params[:id])
+    article.read_count += 1
+    article.save
 
     image_sources = []
-    @article.fleamarket_article_images.each do |t|
+    article.fleamarket_article_images.each do |t|
       image_sources.push(t)
     end
 
-    @article
-    # render json: response_format(contents: {article: article, images: image_sources}), status: :ok
+    render json: response_format(contents: {article: article, images: image_sources}), status: :ok
   end
 
   def create

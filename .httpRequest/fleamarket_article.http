@@ -6,7 +6,7 @@ Authorization: 1 # 유저 인증정보
 
 ###
 # 특정 게시글 조회 테스트
-GET localhost:3000/fleamarket/articles/1.json
+GET localhost:3000/fleamarket/articles/50000.json
 Content-Type: application/json
 Authorization: 1 # 유저 인증정보
 
