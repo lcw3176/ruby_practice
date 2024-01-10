@@ -40,6 +40,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_09_071513) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["fleamarket_article_id"], name: "index_fleamarket_article_likes_on_fleamarket_article_id"
+    t.index ["user_id", "fleamarket_article_id"], name: "idx_on_user_id_fleamarket_article_id_0fceb935f5"
     t.index ["user_id"], name: "index_fleamarket_article_likes_on_user_id"
   end
 
@@ -56,6 +57,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_09_071513) do
     t.boolean "visible", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["id", "wanna_trade_address"], name: "index_fleamarket_articles_on_id_and_wanna_trade_address"
     t.index ["user_id"], name: "index_fleamarket_articles_on_user_id"
   end
 

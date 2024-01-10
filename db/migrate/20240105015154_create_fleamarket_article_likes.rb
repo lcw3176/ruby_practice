@@ -6,6 +6,7 @@ class CreateFleamarketArticleLikes < ActiveRecord::Migration[7.1]
       t.belongs_to :user, null: false, foreign_key: true
       t.belongs_to :fleamarket_article, null: false, foreign_key: true
 
+      t.index [:user_id, :fleamarket_article_id]
       t.timestamps
     end
   end

@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   skip_before_action :verify_authenticity_token
   before_action :get_auth
 
-  DEFAULT_READ_SIZE = 10
+  DEFAULT_READ_SIZE = 100
 
   def response_format(code: "success", message: "", contents: "")
     {

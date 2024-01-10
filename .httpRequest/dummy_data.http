@@ -2,26 +2,30 @@
 
 GET localhost:3000/dummy-load/a/address-code.json
 Content-Type: application/json
-
+Authorization: 1
 ###
 
 GET localhost:3000/dummy-load/b/user.json
 Content-Type: application/json
+Authorization: 1
 
 ###
 
 GET localhost:3000/dummy-load/c/article.json
 Content-Type: application/json
+Authorization: 1
 
 ###
 
 GET localhost:3000/dummy-load/d/article-like.json
 Content-Type: application/json
+Authorization: 1
 
 ###
 
 GET localhost:3000/dummy-load/e/address-matcher.json
 Content-Type: application/json
+Authorization: 1
 
 
 

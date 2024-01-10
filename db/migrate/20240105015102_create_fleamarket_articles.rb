@@ -15,9 +15,9 @@ class CreateFleamarketArticles < ActiveRecord::Migration[7.1]
       t.integer :trade_status, default: FleamarketArticle.trade_statuses[:sell] # 거래 진행 상태 [:done(완료), :in_progress(거래 체결,예약 중), :sell(판매 중)]
       t.integer :read_count, default: 0 # 게시글 조회수
 
-
       t.boolean :visible , default: true # 글 보이기, 숨김처리 여부
 
+      t.index [:id, :wanna_trade_address]
       t.timestamps
     end
   end
