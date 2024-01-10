@@ -1,4 +1,4 @@
-<% @articles.each do |article| %>
+  <% @articles.each do |article| %>
 
   <a class="box is-shadowless" href="/fleamarket/articles/<%= article.id.to_s %>">
 
@@ -13,10 +13,10 @@
           <p>
             <strong><%= article.title %></strong>
             <br>
-            <small><%= article.trade_address %> * </small>
+            <small><%= article.wanna_trade_address %> * </small>
             <small><%= ((Time.now - article.created_at) / 60 / 60).floor %>시간 전</small>
             <br>
-            <%= article.read_attribute_before_type_cast(:trade_status) == FleamarketArticle.trade_statuses[:wait] ? "" : "블라블라" %> <%= article.price %>
+            <%= article.read_attribute_before_type_cast(:trade_status) %> <%= article.price %>
             원
           </p>
         </div>
