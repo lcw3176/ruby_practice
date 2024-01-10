@@ -4,7 +4,7 @@ one:
   user_id: 1
   id: 1
   trade_status: sell
-  trade_address: 강북구 수유동
+  wanna_trade_address: 1
   title: 당근 배추 팔아요
   content: 어제 뽑은 농산품이에요
   price: 100000
@@ -17,7 +17,7 @@ two:
   user_id: 2
   id: 2
   trade_status: sell
-  trade_address: 강북구 수유동
+  wanna_trade_address: 1
   title: 장난감
   content: 새거에요
   price: 1000
@@ -30,7 +30,7 @@ three:
   user_id: 3
   id: 3
   trade_status: sell
-  trade_address: 강북구 수유동
+  wanna_trade_address: 1
   title: 볼펜 팔아요
   content: 한번도 안썼어요
   price: 500
@@ -42,7 +42,7 @@ four:
   user_id: 4
   id: 4
   trade_status: sell
-  trade_address: 강북구 미아동
+  wanna_trade_address: 1
   title: TV 팔아요
   content: 이사해야 되서 급처합니다
   price: 1000000
@@ -54,7 +54,7 @@ five:
   user_id: 5
   id: 5
   trade_status: sell
-  trade_address: 강북구 미아동
+  wanna_trade_address: 1
   title: 도토리 다 팔아요
   content: 그냥 팝니다
   price: 201

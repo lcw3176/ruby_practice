@@ -4,10 +4,10 @@ class CreateFleamarketArticles < ActiveRecord::Migration[7.1]
       t.bigint :id, null: false, auto_increment: true # 게시글 아이디
 
       t.belongs_to :user, null: false, foreign_key: true # 판매자 아이디
+      t.bigint :wanna_trade_address # 거래 희망 지역
 
       t.string :title # 게시글 제목
       t.string :content # 게시글 내용
-      t.string :trade_address # 거래 희망 지역
       t.string :thumbnail_url, default: "https://avatars.githubusercontent.com/u/59993347?v=4" # 게시글 대표 이미지
 
       t.integer :price # 판매 가격

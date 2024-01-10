@@ -38,7 +38,7 @@ class FleamarketArticleController < ApplicationController
   private
 
   def fleamarket_article_params
-    params.permit(:id, :user_id, :title, :content, :price, :trade_address, :category)
+    params.permit(:id, :user_id, :title, :content, :price, :wanna_trade_address, :category)
   end
 
 end

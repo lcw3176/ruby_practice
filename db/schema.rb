@@ -45,9 +45,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_09_071513) do
 
   create_table "fleamarket_articles", charset: "utf8mb3", force: :cascade do |t|
     t.bigint "user_id", null: false
+    t.bigint "wanna_trade_address"
     t.string "title"
     t.string "content"
-    t.string "trade_address"
     t.string "thumbnail_url", default: "https://avatars.githubusercontent.com/u/59993347?v=4"
     t.integer "price"
     t.integer "category"
@@ -61,7 +61,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_09_071513) do
 
   create_table "users", charset: "utf8mb3", force: :cascade do |t|
     t.float "manner_degree", default: 36.5
-    t.integer "status"
+    t.integer "status", default: 0
     t.string "phone_number"
     t.string "address"
     t.string "nickname"

@@ -23,7 +23,7 @@ Content-Type: application/json
   "title" : "new",
   "content" : "new",
   "price" : 10000,
-  "trade_address": "mars",
+  "trade_address": 2,
   "category": "etc_used"
 }
 
@@ -37,7 +37,7 @@ Content-Type: application/json
   "title" : "modified",
   "content" : "modified",
   "price" : 100000,
-  "trade_address": "mars",
+  "wanna_trade_address": 2,
   "category": "etc_used"
 }
 
