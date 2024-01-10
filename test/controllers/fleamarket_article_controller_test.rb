@@ -5,7 +5,6 @@ class FleamarketArticleControllerTest < ActionDispatch::IntegrationTest
 
   test "게시글 목록을 조회한다" do
     get "/fleamarket/articles.json", headers: {'Authorization' => 1}
-    puts @response.body
     assert_response :success
   end
 
