@@ -1,6 +1,6 @@
 require "test_helper"
 
-class FleamarketAddressMatcherTest < ActiveSupport::TestCase
+class TradeRegionTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

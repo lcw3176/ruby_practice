@@ -1,8 +1,9 @@
 class FleamarketArticle < ApplicationRecord
   belongs_to :user
+  belongs_to :address_code
+  belongs_to :trade_region
 
   has_many :fleamarket_article_images, dependent: :delete_all
-  has_many :fleamarket_address_matcher, dependent: :delete_all
   has_many :fleamarket_article_likes, dependent: :delete_all
 
   enum :trade_status, [:done, :in_progress, :sell]

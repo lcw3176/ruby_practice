@@ -3,8 +3,9 @@ class CreateFleamarketArticles < ActiveRecord::Migration[7.1]
     create_table :fleamarket_articles, id: :bigint, primary_key: [:id] do |t|
       t.bigint :id, null: false, auto_increment: true # 게시글 아이디
 
-      t.belongs_to :user, null: false, foreign_key: true # 판매자 아이디
-      t.bigint :wanna_trade_address # 거래 희망 지역
+      t.belongs_to :user, null: false # 판매자 아이디
+      t.belongs_to :address_code # 거래 희망 지역'
+      t.belongs_to :trade_region # '게시글 노출 지역'
 
       t.string :title # 게시글 제목
       t.string :content # 게시글 내용
@@ -17,7 +18,6 @@ class CreateFleamarketArticles < ActiveRecord::Migration[7.1]
 
       t.boolean :visible , default: true # 글 보이기, 숨김처리 여부
 
-      t.index [:id, :wanna_trade_address]
       t.timestamps
     end
   end

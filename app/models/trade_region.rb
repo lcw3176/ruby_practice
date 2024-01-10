@@ -1,0 +1,2 @@
+class TradeRegion < ApplicationRecord
+end

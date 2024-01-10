@@ -21,7 +21,6 @@ Rails.application.routes.draw do
   get "/dummy-load/b/user", to: "dummy_data#user" # 데이터 적재용도 (유저)
   get "/dummy-load/c/article", to: "dummy_data#article" # 데이터 적재용도 (게시글)
   get "/dummy-load/d/article-like", to: "dummy_data#article_like" # 데이터 적재용도 (게시글 좋아용)
-  get "/dummy-load/e/address-matcher", to: "dummy_data#article_address_matcher" # 데이터 적재용도 (게시글 주소코드 매칭 테이블)
 
 
 
