@@ -2,38 +2,41 @@
 # 게시글 조회 테스트
 GET localhost:3000/fleamarket/articles
 Content-Type: application/json
+Authorization: 1 # 유저 인증정보
 
 ###
 # 특정 게시글 조회 테스트
 GET localhost:3000/fleamarket/articles/1.json
 Content-Type: application/json
+Authorization: 1 # 유저 인증정보
 
 ###
 # 잘못된 게시글 조회 테스트
 GET localhost:3000/fleamarket/articles/111111111111111111111111.json
 Content-Type: application/json
+Authorization: 1 # 유저 인증정보
 
 ###
 # 게시글 생성 테스트
 POST localhost:3000/fleamarket/articles.json
 Content-Type: application/json
+Authorization: 1 # 유저 인증정보
 
 {
-  "user_id": "1",
   "title" : "new",
   "content" : "new",
   "price" : 10000,
-  "trade_address": 2,
+  "wanna_trade_address": 1,
   "category": "etc_used"
 }
 
 ###
 # 게시글 수정 테스트
-PUT localhost:3000/fleamarket/articles/1.json
+PUT localhost:3000/fleamarket/articles/2.json
 Content-Type: application/json
+Authorization: 1 # 유저 인증정보
 
 {
-  "user_id": "1",
   "title" : "modified",
   "content" : "modified",
   "price" : 100000,
@@ -43,5 +46,6 @@ Content-Type: application/json
 
 ###
 # 게시글 삭제 테스트
-DELETE localhost:3000/fleamarket/articles/1.json
+DELETE localhost:3000/fleamarket/articles/100000.json
 Content-Type: application/json
+Authorization: 1 # 유저 인증정보

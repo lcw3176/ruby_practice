@@ -1,23 +1,24 @@
 ###
 # 좋아요 한 게시글 조회 테스트
-GET localhost:3000/fleamarket/user/1/article/like.json
+GET localhost:3000/fleamarket/user/articles/like.json
 Content-Type: application/json
-
+Authorization: 1 # 유저 인증정보
 
 
 ###
 # 게시글 좋아요
 POST localhost:3000/fleamarket/articles/like.json
 Content-Type: application/json
+Authorization: 1 # 유저 인증정보
 
 {
-  "user_id": 1,
-  "article_id": 2
+  "article_id": 2000
 }
 
 
 ###
 # 게시글 좋아요 삭제
-DELETE localhost:3000/fleamarket/articles/like/2?user_id=1
+DELETE localhost:3000/fleamarket/articles/like/2000
 Content-Type: application/json
+Authorization: 1 # 유저 인증정보
 

@@ -1,6 +1,12 @@
 class FleamarketArticleController < ApplicationController
+
   def index
-    articles = FleamarketArticle.order(:id).last(10).reverse
+    user = User.find(@user_auth_id)
+    articles = FleamarketArticle.joins(:fleamarket_address_matcher)
+                                .where(:wanna_trade_address => user.address)
+                                .order(:id)
+                                .last(DEFAULT_READ_SIZE)
+                                .reverse
 
     render json: response_format(contents: articles), status: :ok
   end
@@ -15,16 +21,25 @@ class FleamarketArticleController < ApplicationController
   end
 
   def create
-    article = FleamarketArticle.new(fleamarket_article_params)
-    article.save
+    article = FleamarketArticle.new(user_id: @user_auth_id,
+                                    title: params[:title],
+                                    content: params[:content],
+                                    price: params[:price],
+                                    wanna_trade_address: params[:wanna_trade_address],
+                                    category: params[:category])
+
+    raise ActiveRecord::RecordNotSaved unless article.save
 
     render json: response_format, status: :ok
   end
 
-  # find vs find_by
   def update
     article = FleamarketArticle.find(params[:id])
-    article.update(fleamarket_article_params)
+    article.update(title: params[:title],
+                   content: params[:content],
+                   price: params[:price],
+                   wanna_trade_address: params[:wanna_trade_address],
+                   category: params[:category])
 
     render json: response_format, status: :ok
   end
@@ -33,12 +48,6 @@ class FleamarketArticleController < ApplicationController
     FleamarketArticle.destroy(params[:id])
 
     render json: response_format, status: :ok
-  end
-
-  private
-
-  def fleamarket_article_params
-    params.permit(:id, :user_id, :title, :content, :price, :wanna_trade_address, :category)
   end
 
 end
