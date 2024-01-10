@@ -2,8 +2,8 @@ class FleamarketArticleController < ApplicationController
 
   def index
     user = User.find(@user_auth_id)
-    articles = FleamarketAddressMatcher.joins(:fleamarket_article)
-                                .where(:address_codes => user.address)
+    articles = FleamarketArticle.joins(:fleamarket_address_matcher)
+                                .where(:wanna_trade_address => user.address)
                                 .order(:id)
                                 .last(DEFAULT_READ_SIZE)
                                 .reverse

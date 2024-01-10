@@ -2,7 +2,7 @@ class DummyDataController < ApplicationController
 
   def address_code
     AddressCode.transaction do
-      (1.. 500).each do |t|
+      (1.. 2000).each do |t|
         address_code = AddressCode.new(:code => t)
         address_code.save
       end
@@ -27,7 +27,7 @@ class DummyDataController < ApplicationController
 
       (1.. 100000).each do |t|
         article = FleamarketArticle.new(user_id: t,
-                                        wanna_trade_address: t % 500 + 1,
+                                        wanna_trade_address: t % 2000 + 1,
                                         title: t,
                                         content: t,
                                         price: t,
@@ -36,13 +36,6 @@ class DummyDataController < ApplicationController
 
         like = FleamarketArticleLike.new(user_id: t, fleamarket_article_id: article.id)
         like.save
-
-        (1.. 4).each do |v|
-
-          matcher = FleamarketAddressMatcher.new(fleamarket_article_id: article.id, address_code_id: t % 500 + 1)
-          matcher.save
-
-        end
 
       end
 
