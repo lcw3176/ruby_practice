@@ -1,13 +1,8 @@
 class DummyDataController < ApplicationController
 
   def address_code
-    address = AddressCode.order(:id).last(1).reverse
-    start_code = address[0].code
-
-    offset = 100
-
     AddressCode.transaction do
-      (start_code.. start_code + offset).each do |t|
+      (1.. 100).each do |t|
         address_code = AddressCode.new(:code => t)
         address_code.save
       end
@@ -54,17 +49,21 @@ class DummyDataController < ApplicationController
 
   def article_like
 
-    (1.. 100000).each do |t|
-      like = FleamarketArticleLike.new(user_id: t, fleamarket_article_id: t)
-      like.save
+    FleamarketArticleLike.transaction do
+      (1.. 10000).each do |t|
+        like = FleamarketArticleLike.new(user_id: t, fleamarket_article_id: t)
+        like.save
+      end
     end
+
   end
 
   def article_address_matcher
 
     count = 0
 
-    (1.. 100).each do |t|
+    FleamarketAddressMatcher.transaction do
+      (1.. 100).each do |t|
         (1.. 1000).each do |v|
           count += 1
 
@@ -73,6 +72,8 @@ class DummyDataController < ApplicationController
 
         end
       end
+    end
+
   end
 
   private
