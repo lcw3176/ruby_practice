@@ -1,0 +1,17 @@
+###
+# 유저 거래내역 조회
+GET localhost:3000/fleamarket/user/1/trades.json
+Content-Type: application/json
+
+
+###
+# 유저 판매내역 조회
+GET localhost:3000/fleamarket/user/1/trades/sell.json
+Content-Type: application/json
+
+
+###
+# 유저 구매내역 조회
+GET localhost:3000/fleamarket/user/1/trades/buy.json
+Content-Type: application/json
+
