@@ -13,11 +13,15 @@ class FleamarketArticleController < ApplicationController
 
   def show
     article = FleamarketArticle.find(params[:id])
-
     article.read_count += 1
     article.save
 
-    render json: response_format(contents: article), status: :ok
+    image_sources = []
+    article.fleamarket_article_images.each do |t|
+      image_sources.push(t)
+    end
+
+    render json: response_format(contents: {article: article, images: image_sources}), status: :ok
   end
 
   def create
@@ -30,6 +34,11 @@ class FleamarketArticleController < ApplicationController
 
     raise ActiveRecord::RecordNotSaved unless article.save
 
+    params[:images].each do |v|
+      article_image = FleamarketArticleImage.new(:fleamarket_article_id => article.id, :source_url => v)
+      raise ActiveRecord::RecordNotSaved unless article_image.save
+    end
+
     render json: response_format, status: :ok
   end
 
@@ -40,6 +49,11 @@ class FleamarketArticleController < ApplicationController
                    price: params[:price],
                    wanna_trade_address: params[:wanna_trade_address],
                    category: params[:category])
+
+    params[:images].each do |v|
+      article_image = FleamarketArticleImage.new(:fleamarket_article_id => article.id, :source_url => v)
+      raise ActiveRecord::RecordNotSaved unless article_image.save
+    end
 
     render json: response_format, status: :ok
   end

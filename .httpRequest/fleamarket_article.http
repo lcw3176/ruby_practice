@@ -27,7 +27,12 @@ Authorization: 1 # 유저 인증정보
   "content" : "new",
   "price" : 10000,
   "wanna_trade_address": 1,
-  "category": "etc_used"
+  "category": "etc_used",
+  "images": [
+    "hello",
+    "hello",
+    "hello"
+  ]
 }
 
 ###
@@ -41,7 +46,12 @@ Authorization: 1 # 유저 인증정보
   "content" : "modified",
   "price" : 100000,
   "wanna_trade_address": 2,
-  "category": "etc_used"
+  "category": "etc_used",
+  "images": [
+    "changed",
+    "changed",
+    "changed"
+  ]
 }
 
 ###
