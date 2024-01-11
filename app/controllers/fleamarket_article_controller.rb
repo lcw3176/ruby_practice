@@ -2,8 +2,8 @@ class FleamarketArticleController < ApplicationController
 
   def index
     user = User.find(@user_auth_id)
-    articles = FleamarketArticle.where(:ex => user.address)
-                                .order(:id)
+    articles = FleamarketArticle.where(:trade_region_id => user.trade_region)
+                                .order(:created_at)
                                 .last(DEFAULT_READ_SIZE)
                                 .reverse
 
@@ -28,7 +28,8 @@ class FleamarketArticleController < ApplicationController
                                     title: params[:title],
                                     content: params[:content],
                                     price: params[:price],
-                                    wanna_trade_address: params[:wanna_trade_address],
+                                    address_code_id: params[:address_code],
+                                    trade_region_id: params[:trade_region],
                                     category: params[:category])
 
     raise ActiveRecord::RecordNotSaved unless article.save
@@ -46,7 +47,8 @@ class FleamarketArticleController < ApplicationController
     article.update(title: params[:title],
                    content: params[:content],
                    price: params[:price],
-                   wanna_trade_address: params[:wanna_trade_address],
+                   address_code_id: params[:address_code],
+                   trade_region_id: params[:trade_region],
                    category: params[:category])
 
     params[:images].each do |v|
@@ -61,6 +63,13 @@ class FleamarketArticleController < ApplicationController
     FleamarketArticle.destroy(params[:id])
 
     render json: response_format, status: :ok
+  end
+
+
+  private
+
+  def article_params
+    params.permit(:title, :content, :price, :address_code, :trade_region, :category)
   end
 
 end

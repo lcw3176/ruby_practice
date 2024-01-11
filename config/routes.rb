@@ -17,10 +17,10 @@ Rails.application.routes.draw do
 
 
 
-  get "/dummy-load/a/address-code", to: "dummy_data#address_code" # 데이터 적재용도 (주소 코드)
-  get "/dummy-load/b/user", to: "dummy_data#user" # 데이터 적재용도 (유저)
-  get "/dummy-load/c/article", to: "dummy_data#article" # 데이터 적재용도 (게시글)
-  get "/dummy-load/d/article-like", to: "dummy_data#article_like" # 데이터 적재용도 (게시글 좋아용)
+  get "/dummy-load/a/address", to: "dummy_data#address" # 데이터 적재용도 (주소 코드)
+  get "/dummy-load/b/user-article", to: "dummy_data#user_article" # 데이터 적재용도 (유저)
+  # get "/dummy-load/c/article", to: "dummy_data#article" # 데이터 적재용도 (게시글)
+  # get "/dummy-load/d/article-like", to: "dummy_data#article_like" # 데이터 적재용도 (게시글 좋아용)
 
 
 

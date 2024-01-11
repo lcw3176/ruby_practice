@@ -63,10 +63,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_10_213852) do
     t.float "manner_degree", default: 36.5
     t.integer "status", default: 0
     t.string "phone_number"
-    t.string "address"
+    t.bigint "address_code_id"
+    t.bigint "trade_region_id"
     t.string "nickname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["address_code_id"], name: "index_users_on_address_code_id"
+    t.index ["trade_region_id"], name: "index_users_on_trade_region_id"
   end
 
 end

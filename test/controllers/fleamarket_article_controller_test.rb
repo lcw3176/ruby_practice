@@ -24,8 +24,10 @@ class FleamarketArticleControllerTest < ActionDispatch::IntegrationTest
            "title": "new",
            "content": "new",
            "price": 10000,
-           "wanna_trade_address": 1,
-           "category": "etc_used"
+           "address_code": 1,
+           "trade_region": 1,
+           "category": "etc_used",
+           "images": []
          },
          headers: {'Authorization' => 1}
 
@@ -38,8 +40,10 @@ class FleamarketArticleControllerTest < ActionDispatch::IntegrationTest
            "title": "modified",
            "content": "modified",
            "price": 1,
-           "wanna_trade_address": 2,
-           "category": "etc_used"
+           "address_code": 1,
+           "trade_region": 1,
+           "category": "etc_used",
+           "images": []
          },
          headers: {'Authorization' => 1}
 
@@ -49,13 +53,6 @@ class FleamarketArticleControllerTest < ActionDispatch::IntegrationTest
   test "게시글을 삭제한다" do
 
     delete "/fleamarket/articles/1.json",
-         params: {
-           "title": "modified",
-           "content": "modified",
-           "price": 1,
-           "wanna_trade_address": 2,
-           "category": "etc_used"
-         },
          headers: {'Authorization' => 1}
 
     assert_response :success

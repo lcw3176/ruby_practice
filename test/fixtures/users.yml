@@ -5,7 +5,8 @@ one:
   status: normal
   manner_degree: 36.5
   phone_number: 010-1111-1111
-  address: 1
+  address_code_id: 1
+  trade_region_id: 1
   nickname: 수유1
 
 two:
@@ -13,7 +14,8 @@ two:
   status: normal
   manner_degree: 36.5
   phone_number: 010-2222-2222
-  address: 1
+  address_code_id: 1
+  trade_region_id: 1
   nickname: 수유2
 
 three:
@@ -21,7 +23,8 @@ three:
   status: normal
   manner_degree: 38.1
   phone_number: 010-3333-3333
-  address: 1
+  address_code_id: 1
+  trade_region_id: 1
   nickname: 수유3
 
 four:
@@ -29,7 +32,8 @@ four:
   status: normal
   manner_degree: 22.1
   phone_number: 010-4444-4444
-  address: 1
+  address_code_id: 1
+  trade_region_id: 1
   nickname: 미아1
 
 five:
@@ -37,7 +41,8 @@ five:
   status: normal
   manner_degree: 25.2
   phone_number: 010-5555-5555
-  address: 1
+  address_code_id: 1
+  trade_region_id: 1
   nickname: 미아2
 
 six:
@@ -45,5 +50,6 @@ six:
   status: normal
   manner_degree: 90.7
   phone_number: 010-6666-6666
-  address: 1
+  address_code_id: 1
+  trade_region_id: 1
   nickname: 미아3
