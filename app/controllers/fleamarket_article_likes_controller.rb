@@ -7,7 +7,7 @@ class FleamarketArticleLikesController < ApplicationController
                                 .last(DEFAULT_READ_SIZE)
                                 .reverse
 
-    render json: response_format(contents: articles), status: :ok
+    render json: response_format(contents: { article: articles }), status: :ok
   end
   def create
     exist_like_check = FleamarketArticleLike.find_by(user_id: @user_auth_id,

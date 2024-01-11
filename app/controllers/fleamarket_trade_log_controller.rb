@@ -6,7 +6,7 @@ class FleamarketTradeLogController < ApplicationController
                                 .last(DEFAULT_READ_SIZE)
                                 .reverse
 
-    render json: response_format(contents: articles), status: :ok
+    render json: response_format(contents: { article: articles }), status: :ok
   end
 
   # 만약 프론트도 같이 작업했다면 밑에 두개 컨트롤러는 딱히 만들거 같지는 않고
@@ -22,7 +22,7 @@ class FleamarketTradeLogController < ApplicationController
                                 .last(DEFAULT_READ_SIZE)
                                 .reverse
 
-    render json: response_format(contents: articles), status: :ok
+    render json: response_format(contents: { article: articles }), status: :ok
   end
 
   def buy
@@ -32,7 +32,7 @@ class FleamarketTradeLogController < ApplicationController
                                 .last(DEFAULT_READ_SIZE)
                                 .reverse
 
-    render json: response_format(contents: articles), status: :ok
+    render json: response_format(contents: { article: articles }), status: :ok
   end
 
 end
